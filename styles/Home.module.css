@@ -118,7 +118,7 @@
 @keyframes float3 {
 	0% {
 
-		transform: translateY(5px);
+		transform: translateY(12px);
 	}
 	50% {
 
@@ -126,6 +126,6 @@
 	}
 	100% {
 
-		transform: translateY(5px);
+		transform: translateY(12px);
 	}
 }
