@@ -118,14 +118,14 @@
 @keyframes float3 {
 	0% {
 
-		transform: translateY(12px);
+		transform: translateY(30px);
 	}
 	50% {
 
-		transform: translateY(-28px);
+		transform: translateY(-18px);
 	}
 	100% {
 
-		transform: translateY(12px);
+		transform: translateY(30px);
 	}
 }

@@ -39,6 +39,22 @@
   font-size: 1.3rem;
 }
 
+.movies-series-buttons {
+  position: absolute;
+  left: 105%;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  color: #f6ba01;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .login-sign-in-buttos {
   display: flex;
   align-items: center;
@@ -47,7 +63,7 @@
 }
 
 .login {
-  color: #B6DDF7;
+  color: #b6ddf7;
 }
 
 .sign-in {
@@ -77,7 +93,7 @@
   box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 2em var(--glow-spread-color),
     inset 0 0 0.75em 0.25em var(--glow-color);
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .sign-in:active {
@@ -85,7 +101,6 @@
     0 0 2.5em 2em var(--glow-spread-color),
     inset 0 0 0.5em 0.25em var(--glow-color);
 }
-
 
 .sign-in:hover {
   box-shadow: 0px 0px 10px 3px #9c88ff;

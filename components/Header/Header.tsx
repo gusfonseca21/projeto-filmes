@@ -22,7 +22,16 @@ const Header = () => {
           placeholder="Pesquise por filmes e séries"
         />
         <BiSearchAlt className={classes["search-icon"]} />
+        <div className={classes["movies-series-buttons"]}>
+          <button className={`${classes.movies} ${classes.button}`}>
+            Movies
+          </button>
+          <button className={`${classes.series} ${classes.button}`}>
+            Series
+          </button>
+        </div>
       </div>
+
       <div className={classes["login-sign-in-buttos"]}>
         <button className={classes["login"]}>Entrar</button>
         <button className={classes["sign-in"]}>Cadastre-se</button>
