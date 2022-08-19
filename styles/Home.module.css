@@ -1,10 +1,131 @@
-.container {
-  background-color: #3a334a;
-  min-height: 100vh;
-}
-
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.footer {
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10rem;
+}
+
+.hero-text {
+  font-size: 3rem;
+  max-width: 35%;
+  color: #F6BA01;
+  font-weight: 900;
+  text-transform:uppercase;
+}
+
+.hero-images {
+  position: relative;
+  width: 550px;
+  height: 649px;
+}
+
+.hero-image-1 {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 320px;
+  width: 240px;
+  z-index: 3;
+  --glow-color: #f5ca40;
+  --glow-spread-color: #c2980d97;
+  --enhanced-glow-color: #f8d770;
+  border: 1px solid var(--glow-color);
+  box-shadow: 0 0 0.1em 0.01em var(--glow-color),
+    0 0 4em 0.5em var(--glow-spread-color), inset 0 0 0em 1em var(--glow-color);
+  border-radius: 50px;
+  animation: float 6.5s ease-in-out infinite;
+}
+
+.hero-image-2 {
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  left: -15%;
+  transform: translateY(0%);
+  width: 371px;
+  height: 247px;
+  --glow-color: #ff6e68;
+  --glow-spread-color: #ff6d68af;
+  --enhanced-glow-color: #ff9e9a;
+  border: 1px solid var(--glow-color);
+  box-shadow: 0 0 0.1em 0.01em var(--glow-color),
+    0 0 4em 0.5em var(--glow-spread-color), inset 0 0 0em 1em var(--glow-color);
+  border-radius: 50px;
+  animation: float2 7s ease-in-out infinite;
+}
+
+.hero-image-3 {
+  position: absolute;
+  height: 302px;
+  width: 241px;
+  z-index: 1;
+  bottom: 0%;
+  left: 80%;
+  transform: translateX(-25%);
+  --glow-color: #34e7e4;
+  --glow-spread-color: #34e7e4a9;
+  --enhanced-glow-color: #85f1ef;
+  border: 1px solid var(--glow-color);
+  box-shadow: 0 0 0.1em 0.01em var(--glow-color),
+    0 0 4em 0.5em var(--glow-spread-color), inset 0 0 0em 1em var(--glow-color);
+  border-radius: 50px;
+  animation: float3 8s ease-in-out infinite;
+}
+
+.teste {
+  border-radius: 50px;
+}
+
+@keyframes float {
+	0% {
+
+		transform: translatey(0px);
+	}
+	50% {
+
+		transform: translatey(-20px);
+	}
+	100% {
+
+		transform: translatey(0px);
+	}
+}
+
+@keyframes float2 {
+	0% {
+
+		transform: translatey(10px);
+	}
+	50% {
+
+		transform: translatey(-28px);
+	}
+	100% {
+
+		transform: translatey(10px);
+	}
+}
+
+@keyframes float3 {
+	0% {
+
+		transform: translateY(5px);
+	}
+	50% {
+
+		transform: translateY(-28px);
+	}
+	100% {
+
+		transform: translateY(5px);
+	}
 }

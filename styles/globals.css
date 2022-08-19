@@ -22,6 +22,11 @@ a {
   background: transparent;
 }
 
+main {
+  height: 92.5vh;
+  padding: 0 3rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
