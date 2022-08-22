@@ -1,50 +1,37 @@
-import Image from "next/image";
-
 import type { NextPage } from "next";
-
-import heroImage1 from "/public/images/hero-image-1.webp";
-import heroImage2 from "/public/images/hero-image-2.webp";
-import heroImage3 from "/public/images/hero-image-3.webp";
 
 import Header from "../components/Header/Header";
 import classes from "../styles/Home.module.css";
 
+import { useSelector, useDispatch } from "react-redux";
+import { increment } from "../slices/stylesSlice";
+import type { RoootState } from "../store";
+
 const Home: NextPage = (org) => {
+  const count = useSelector((state: RoootState) => state.counter.value);
+
+  const dispatch = useDispatch();
+
   console.log(org);
   return (
-    <>
+    <div
+      className={classes["page-container"]}
+      onClick={() => dispatch(increment())}
+    >
       <Header />
       <main className={classes.main}>
         <div className={classes.hero}>
           <h2 className={classes["hero-text"]}>
-            Faça buscas no maior banco de dados de filmes e séries da internet!
+            Faça buscas no maior banco de dados de filmes e séries da internet!{" "}
+            {count}
           </h2>
-          <div className={classes["hero-images"]}>
-            <div className={classes["hero-image-1"]}>
-              <Image
-                src={heroImage1}
-                alt="Posters de filmes"
-                className={classes.teste}
-              />
-            </div>
-            <div className={classes["hero-image-2"]}>
-              <Image
-                src={heroImage2}
-                alt="Posters de filmes"
-                className={classes.teste}
-              />
-            </div>
-            <div className={classes["hero-image-3"]}>
-              <Image
-                src={heroImage3}
-                alt="Posters de filmes"
-                className={classes.teste}
-              />
-            </div>
-          </div>
+          <h3 className={classes["hero-subtext"]}>
+            Procure por nomes de filmes, séries, atores, atrizes, diretores,
+            cineastas, etc.
+          </h3>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

@@ -5,22 +5,29 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
-  background: rgba(37, 33, 47, 0.2);
-  box-shadow: 0 13px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.search-bar {
-  height: 60%;
-  min-width: 35%;
   position: relative;
 }
 
+.header-center {
+  height: 60%;
+  min-width: 35%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.search-bar {
+  height: 100%;
+  min-width: 100%;
+}
+
 .search-input {
+  display: flex;
+  justify-self: center;
   height: 100%;
   width: 100%;
   background-color: #fff;
@@ -39,23 +46,37 @@
   font-size: 1.3rem;
 }
 
-.movies-series-buttons {
-  position: absolute;
-  left: 105%;
-  bottom: 50%;
-  transform: translateY(50%);
+.menu {
+  font-size: 2rem;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-.button {
-  font-size: 1.5rem;
-  color: #f6ba01;
+.menu span {
+  color: #fff;
   font-weight: 600;
-  cursor: pointer;
 }
 
-.login-sign-in-buttos {
+.menu span:hover,
+.menu span:active {
+  cursor: pointer;
+  color: #f6ba01;
+}
+
+.menu-open {
+  position: absolute;
+  width: 30rem;
+  height: 20rem;
+  top: 134%;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-sign-in-buttons {
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -63,7 +84,13 @@
 }
 
 .login {
-  color: #b6ddf7;
+  font-weight: 600;
+}
+
+.login:hover,
+.login:active {
+  color: #f6ba01;
+  cursor: pointer;
 }
 
 .sign-in {
@@ -72,12 +99,11 @@
   --enhanced-glow-color: rgb(231, 206, 255);
   --btn-color: rgb(100, 61, 136);
   border: 2.5px solid var(--glow-color);
-  padding: 1em 2em;
+  padding: 0.5rem 1.1rem;
   color: var(--glow-color);
-  font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   background-color: var(--btn-color);
-  border-radius: 1em;
+  border-radius: 1rem;
   outline: none;
   box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 1em var(--glow-spread-color),
